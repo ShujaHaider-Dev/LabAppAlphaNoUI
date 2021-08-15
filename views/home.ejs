@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab App</title>
+    <style type="text/css" media="screen">
+        body {
+            background-color: skyblue;
+            text-decoration-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This program was created by Syed Muhammad Shuja Haider</h1>
+    <form id="myForm" action="http://localhost:3000/submit/record">
+        Name: <input type="text" name="name"><br>
+        Age: <input type="text" name="age">
+        Gender: <select name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br>
+        <input type="button" onclick="submit()" value="Submit form">
+    </form>
+    
+    <% for(var i=0; i < listItems.length; i++){ %>
+        <div class="item">
+            <p>
+                <%= listItems[i] %>
+            </p>
+        </div>
+        <% } %>
+
+    <script>
+        function submit() {
+            document.getElementById("myForm").submit();
+        }
+    </script>
+</body>
+
+</html>
